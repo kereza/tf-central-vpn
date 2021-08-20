@@ -25,11 +25,6 @@ output "sg_vpn_id" {
   value       = module.sg_vpn.this_security_group_id
 }
 
-output "peering_id" {
-  description = "Map of env ID and  peering connection ID"
-  value       = { for i in keys(var.remote_vpcs) : i => aws_vpc_peering_connection.keri_org[i].id }
-}
-
 /*
 SSH
 */
@@ -52,6 +47,7 @@ VPN
 output "client_key_pem" {
   description = "Materia for the client key"
   value       = tls_private_key.client_side_vpn.private_key_pem
+  sensitive   = true
 }
 
 output "client_cert_pem" {
