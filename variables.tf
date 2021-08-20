@@ -42,8 +42,9 @@ variable "remote_vpcs" {
   type        = map
   default = {
     dev = {
-      vpc_id = "vpc-0b9b1d62a516f67fe"
-      cidr   = "10.2.0.0/16"
+      vpc_id     = "vpc-0b9b1d62a516f67fe"
+      cidr       = "10.2.0.0/16"
+      peering_id = "pcx-09c31096561163f6b"
     }
   }
 }
