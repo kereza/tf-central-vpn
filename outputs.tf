@@ -25,6 +25,11 @@ output "sg_vpn_id" {
   value       = module.sg_vpn.this_security_group_id
 }
 
+output "peering_id" {
+  description = "Map of env ID and  peering connection ID"
+  value       = { for i in keys(var.remote_vpcs) : i => aws_vpc_peering_connection.keri_org[i].id }
+}
+
 /*
 SSH
 */
