@@ -1,4 +1,4 @@
-# tf-central-vpn
+# setting up the AWS Central Client VPN based on Certificase for authentication.
 
 This repo is part of series of personal repos where I do tests on the following topics:
 
